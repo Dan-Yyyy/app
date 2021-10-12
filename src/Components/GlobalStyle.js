@@ -44,7 +44,7 @@ export const GlobalStyle = createGlobalStyle `
   h1, h2, h3{
     padding: 0;
     margin: 0;
-    font-family: 'Ephesis', cursive;
+    font-family: 'Pacifico', cursive;
   }
 
   p {

@@ -14,7 +14,7 @@ const NavBarStyled = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #648dff;
+    background-color: #036ff4;
     color: white;
 `;
 
@@ -46,8 +46,7 @@ const ButtonLogin = styled.button`
     align-items: center;
     flex-direction: column;
     font-size: 16px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
+    margin-right: 25px;
 `;
 
 export const NavBar = () => (
@@ -58,6 +57,7 @@ export const NavBar = () => (
         </Logo>
         <ButtonLogin>
             <ButtonImg src={buttonImg} alt="sing"/>
-            войти</ButtonLogin>
+            <p>войти</p>
+        </ButtonLogin>
     </NavBarStyled>
 );

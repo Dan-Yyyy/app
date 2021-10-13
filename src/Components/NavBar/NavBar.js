@@ -9,7 +9,7 @@ const NavBarStyled = styled.header`
     left: 0;
     z-index: 999;
     height: 80px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +46,6 @@ const ButtonLogin = styled.button`
     align-items: center;
     flex-direction: column;
     font-size: 16px;
-    margin-right: 25px;
 `;
 
 export const NavBar = () => (

@@ -12,7 +12,10 @@ const CountInput = styled.input`
 `;
 
 const ButtonCount = styled.button`
-    background-color: transparant;
+    background-color: #C4C4C4;
+    width: 30px;
+    text-align: center;
+    border-color: transparent;
 `;
 
 export function CountItem({ count, setCount, onChange }) {

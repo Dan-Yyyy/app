@@ -10,7 +10,7 @@ const ToppingWrap = styled.div`
 
 const ToppingLabel = styled.label`
     display: flex;
-    align-item: center;
+    align-items: center;
     cursor: pointer;
 `;
 
@@ -33,7 +33,7 @@ const ToppingCheckbox = styled.input`
     }
 `;
 
-export function Toppings ({ toppings, ckeckToppings }) {
+export function Toppings ({ toppings, checkToppings }) {
     return (
         <>
             <h3>Добавки</h3>
@@ -42,7 +42,7 @@ export function Toppings ({ toppings, ckeckToppings }) {
                     <ToppingLabel key={i}>
                         <ToppingCheckbox type='checkbox'
                         checked={item.cheked}
-                        onChange={() => ckeckToppings(i)}/>
+                        onChange={() => checkToppings(i)}/>
                         {item.name}
                     </ToppingLabel>
                 ))}

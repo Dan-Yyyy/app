@@ -28,7 +28,7 @@ const ChoiceRadio = styled.input`
     }
 `;
 
-const ChoiseLabel = styled.label`
+const ChoiceLabel = styled.label`
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -40,14 +40,15 @@ export function Choices({ openItem, choice, changeChoices }) {
             <h3>Выберите:</h3>
             <ChoiceWrap>
                 {openItem.choices.map((item, i) => (
-                    <ChoiseLabel key={i}>
-                        <ChoiceRadio type='radio'
-                        name="choices"
-                        checked={choice === item}
-                        value={item}
-                        onChange={changeChoices}/>
+                    <ChoiceLabel key={i}>
+                        <ChoiceRadio 
+                            type='radio'
+                            name="choices"
+                            checked={choice === item}
+                            value={item}
+                            onChange={changeChoices}/>
                         {item}
-                    </ChoiseLabel>
+                    </ChoiceLabel>
                 ))}
             </ChoiceWrap>
         </>

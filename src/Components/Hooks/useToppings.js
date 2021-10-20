@@ -7,12 +7,13 @@ const getTopping = toppings => toppings.map(item => ({
 
 export function useToppings(openItem) {
 
-    const readyTopping = openItem.toppings ? 
-    getTopping(openItem.toppings) 
-    : [];
-    const [toppings, setToppings] = useState(getTopping(readyTopping));
+    const readyTopping = openItem.topping ? openItem.topping 
+        : openItem.toppings ?
+        getTopping(openItem.toppings) 
+        : [];
+    const [toppings, setToppings] = useState(readyTopping);
 
-    const ckeckToppings = index => {
+    const checkToppings = index => {
         setToppings(toppings.map((item, i) => {
             const newItem = {...item};
             if(i === index) {
@@ -21,5 +22,5 @@ export function useToppings(openItem) {
             return newItem;
         }))
     }
-    return {toppings, ckeckToppings};
+    return {toppings, checkToppings};
 }

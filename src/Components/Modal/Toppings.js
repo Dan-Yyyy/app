@@ -40,9 +40,11 @@ export function Toppings ({ toppings, checkToppings }) {
             <ToppingWrap>
                 {toppings.map((item, i) => (
                     <ToppingLabel key={i}>
-                        <ToppingCheckbox type='checkbox'
-                        checked={item.cheked}
-                        onChange={() => checkToppings(i)}/>
+                        <ToppingCheckbox 
+                            type="checkbox"
+                            checked={item.checked}
+                            onChange={() => checkToppings(i)}
+                        />
                         {item.name}
                     </ToppingLabel>
                 ))}
